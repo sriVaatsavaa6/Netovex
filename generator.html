@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netovex | Generator</title>
+    <link rel="icon" type="image/png" href="NETOVEX.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="generator-page">
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-main">Netovex</a>
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#generator">Generator</a></li>
+                <li><a href="#card-customization">Customization</a></li>
+                <li><a href="#preview">Preview</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Design intuitive, stylish digital cards that inspire</h1>
+                <p>Personalize and generate sleek, modern business cards in minutes.</p>
+            </div>
+        </section>
+
+        <section id="generator" class="input-section">
+            <div class="section-content highlighted">
+                <h2>Enter Your Details</h2>
+                <p>Fill in the fields below to create your personalized digital business card.</p>
+                <div class="form-container">
+                    <input type="text" id="name" placeholder="Full Name" class="input-field">
+                    <input type="text" id="designation" placeholder="Designation" class="input-field">
+                    <input type="text" id="company" placeholder="Company Name" class="input-field">
+                    <input type="text" id="contact" placeholder="Phone / Email" class="input-field">
+                    <input type="url" id="website" placeholder="Website / LinkedIn" class="input-field">
+                    <label for="photo-upload">Upload Profile Photo:</label>
+                    <input type="file" id="photo-upload" accept="image/*" class="input-field">
+                </div>
+            </div>
+        </section>
+
+        <section id="card-customization" class="customization-section">
+            <div class="customization-container">
+                <h2>🛠 Customize Your Card</h2>
+                <p>Modify your card's design in real-time with our powerful customization options.</p>
+                <div class="customization-options">
+                    <div class="customization-item">
+                        <label for="font-family">Choose Font:</label>
+                        <select id="font-family" class="input-field">
+                            <option value="'Roboto', sans-serif">Roboto</option>
+                            <option value="'Open Sans', sans-serif">Open Sans</option>
+                            <option value="'Poppins', sans-serif">Poppins</option>
+                        </select>
+                    </div>
+                    <div class="customization-item">
+                        <label for="bg-color">Background Color:</label>
+                        <input type="color" id="bg-color" class="input-color-picker" value="#FFFFFF">
+                    </div>
+                    <div class="customization-item">
+                        <label for="text-color">Text Color:</label>
+                        <input type="color" id="text-color" class="input-color-picker" value="#000000">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="preview" class="card-preview">
+            <div class="section-content">
+                <h2>Preview Your Masterpiece !!</h2>
+                <div id="business-card" class="business-card">
+                    <div class="profile-photo">
+                        <img id="profile-pic" src="placeholder-photo.png" alt="Your Photo">
+                    </div>
+                    <h3 id="card-name" class="card-text">Your Name</h3>
+                    <p id="card-designation" class="card-text">Your Designation</p>
+                    <p id="card-company" class="card-text">Your Company</p>
+                    <p id="card-contact" class="card-text">Your Contact</p>
+                    <p id="card-website" class="card-text">Your Website</p>
+                    <p id="generated-id" class="id-section">ID: NetovexID12345</p>
+                    <div id="qr-code" class="qr-code"></div>
+                </div>
+
+                <div class="button-container">
+                    <button id="generate" class="btn btn-primary">Generate & Preview</button>
+                    <button id="reset" class="btn btn-primary">Reset Card</button>
+                </div>
+
+                <a id="download" href="#" class="btn btn-primary">Download Card</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">Netovex</div>
+            <p>&copy; 2025 Netovex. All rights reserved.</p>
+            <p class="ai-credit">AI-Infused and Creatively Enhanced by <strong>Akshay Srivatsava. B</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

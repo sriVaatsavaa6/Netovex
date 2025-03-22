@@ -1,0 +1,751 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #FAE6C0, #fde3a9b6, #e6c792b0); /* Subtle neutral gradient */
+    color: #333; /* Neutral base text color */
+    overflow-x: hidden; /* Prevents the grey bar caused by horizontal overflow */
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Full-Width Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #0287df, #ffc320); /* Dark Charcoal for contrast */
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar.hidden {
+    transform: translateY(-100%); /* Move the navbar out of view */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo-main {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.logo-main:hover {
+    color: #F8F9FA;  /* Changes color on hover */
+}
+
+.logo-accent {
+    color: #0AEFFF; /* Vivid Cyan for vibrancy */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #040e69; /* Cyan hover effect */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: none;
+    color: rgb(5, 64, 141);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #01031a;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #c20573;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9; /* Neutral background */
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Features Section */
+.features-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9; /* Light Gray */
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: #333; /* Soft Purple */
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #183153, #0eb4c0); /* Gradient for vibrancy */
+    color: white;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* FAQ Section */
+.faq-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9; /* Neutral background */
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff; /* Neutral base */
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    border-top: 3px solid rgba(0, 255, 255, 0.7); /* Softer cyan */
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #0AEFFF; /* Vivid Cyan for links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.footer-tagline {
+    margin-top: 10px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Highlighted Input Section */
+.input-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #183153, #0eb4c0); /* Vibrant gold gradient */
+    color: #333; /* Neutral text for balance */
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Adds depth */
+}
+
+.input-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff; /* Dark charcoal for contrast */
+    margin-bottom: 15px;
+}
+
+.input-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.input-field {
+    padding: 15px 20px;
+    border: 0px solid #09044d; /* Highlighted border */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1F2937;
+    background: #fff;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    border-color: #FFD700; /* Gold border on focus */
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); /* Subtle glow */
+    outline: none;
+}
+
+.btn-primary {
+    background: #FB7185; /* Bright coral */
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #070224; /* Fiery orange on hover */
+}
+
+/* Preview Section Styling */
+.preview-section {
+    text-align: center; /* Center-aligns the content */
+    margin: 40px 0; /* Adds spacing from other sections */
+}
+
+.btn-preview {
+    display: inline-block; /* Makes the button behave like a block for better styling */
+    background: linear-gradient(135deg, #FF5722, #FB7185); /* Vibrant orange-to-coral gradient */
+    color: #fff; /* White text for contrast */
+    padding: 15px 40px; /* Comfortable button size */
+    font-size: 1.2rem; /* Slightly larger font */
+    font-weight: bold; /* Makes the text stand out */
+    border-radius: 50px; /* Rounded edges for a sleek look */
+    text-decoration: none; /* Removes underline */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.btn-preview:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background: linear-gradient(135deg, #FB7185, #FF5722); /* Reversed gradient for hover */
+}
+
+/* Card Preview Section */
+.card-preview {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #183153, #0eb4c0); /* Golden gradient */
+    color: #333;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Adds depth */
+    box-sizing: border-box; /* ensure padding is included in width calculation */
+}
+
+.card-preview h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff; /* Dark charcoal for contrast */
+    margin-bottom: 20px;
+}
+
+.business-card h3 {
+    font-size: 1.5rem;
+    color: #FB7185; /* Bright coral for heading */
+    margin-bottom: 10px;
+}
+
+.business-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    background: #E5E7EB; /* Light gray placeholder */
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Business Card Styles */
+.business-card {
+    max-width: 350px;
+    width:90%;
+    padding: 20px;
+    margin: 20px auto;
+    background: var(--card-bg, #FF5F6D); /* Default color */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.582);
+    transform: translateY(-5px); /* Always lifted */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.card-preview .section-content {
+    display: flex;
+    flex-direction: column; /* Stack the card and button */
+    align-items: center; /* Center-align content */
+    gap: 30px; /* Add spacing specifically between the card and button */
+    padding: 20px; /* Add padding here so it is responsive */
+}
+
+.btn-primary {
+    background: #d35064; /* Bright coral */
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #FF5722; /* Fiery orange */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Customization Section */
+.customization-section {
+    background: linear-gradient(135deg, #f9f9f9, #e9ecef);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.customization-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.customization-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.customization-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.customization-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.customization-item {
+    flex: 1 1 45%;
+    text-align: left;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.customization-item label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-color-picker {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Circular Photo */
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Details */
+.card-details h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+}
+
+.card-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.id-section {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f1f1f1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    margin-top: 15px;
+}
+
+.btnew {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px; /* Ensures similar rounded corners */
+    background-color: #FF5F6D;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnew:hover {
+    background-color: #E04E5E;
+}
+
+#qr-code {
+    padding: 7px; /* Adds spacing around the QR */
+    background: white; /* White background for better contrast */
+    display: inline-block; /* Ensures proper alignment */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); /* Optional: Light shadow effect */
+}
+
+
+/* Founder Section */
+.founder-section {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 50px; /* Match padding with other sections */
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1500px; /* Ensure it matches the width of other sections */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.founder-section h2 {
+    font-size: 2.5rem; /* Match heading size */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #facc15;
+}
+
+/* Paragraph Styling */
+.founder-section p {
+    font-size: 1.2rem; /* Increase text size for balance */
+    line-height: 1.8;
+    font-weight: 300;
+    color: #e2e8f0;
+    max-width: 1100px; /* Ensure text width consistency */
+    margin: 0 auto;
+}
+
+/* Strong Text Styling */
+.founder-section strong {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #facc15;
+}
+
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .founder-section {
+        padding: 40px 15px;
+    }
+
+    .founder-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .founder-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Ensure responsiveness for very small screens */
+@media (max-width: 375px) {
+    .card-preview {
+        padding: 20px 10px; /* Further reduce padding for very small screens */
+    }
+    .card-preview .section-content {
+        gap: 15px; /* Reduce gap on very small screens */
+    }
+}
+
+/* ... (Your existing CSS, up to the media queries) ... */
+
+/* ... (Your existing CSS, up to the media queries) ... */
+
+/* Media Queries (Consolidated and Corrected) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-section,
+    .card-preview,
+    .customization-section {
+        padding: 30px 10px;
+    }
+
+    .form-container {
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-preview {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .business-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .feature-card,
+    .testimonial-card,
+    .faq-item {
+        padding: 15px;
+    }
+
+    /* Adjust navbar padding and logo size for mobile */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+}
+
+/* ✅ Navigation Menu (Desktop Styles - Fixed) */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex; /* Ensure menu is visible on desktop */
+    }
+}
+
+/* Hide all menu items except the logo on small screens for index.html */
+@media (max-width: 768px) {
+    .index-page .nav-menu ul {
+        display: none; /* Hides the entire menu list */
+    }
+}
+/* Show only logo and Home in generator.html */
+@media (max-width: 768px) {
+    .generator-page .nav-menu ul li:not(:first-child):not(.home-menu) {
+        display: none;
+    }
+}
+
+.ai-credit {
+    font-style: normal;
+    font-size: 1rem; /* Adjust size */
+    color: #d8d7d7;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.ai-credit strong {
+    font-weight: 700;
+    font-style: normal;
+    color: #E0C078; /* Softer gold */
+    text-shadow: 0 0 2px rgba(255, 215, 0, 0.5);
+}
+
+
